@@ -13,6 +13,12 @@ if (process.env.NODE_ENV === "production") {
 app.get("*", function(req, res) {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
+app.use(express.static(__dirname + '/dist/client'));
+app.get('/*', function(req,res) {
+res.sendFile(path.join(__dirname + '/dist/client/index.html'));
+
+});
+
 
 app.listen(PORT, function() {
   console.log(`🌎 ==> API server now on port ${PORT}!`);
