@@ -2,7 +2,7 @@
   "name": "mern",
   "version": "0.1.0",
   "private": true,
-  "engines":{
+  "engines": {
     "node": "12.13.0",
     "npm": "6.12.0"
   },

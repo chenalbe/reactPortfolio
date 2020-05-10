@@ -4,8 +4,6 @@ const router = require("express").Router();
 // API Routes
 
 // If no API routes are hit, send the React app
-router.use(function(req, res) {
-  res.sendFile(path.join(__dirname, "../client/build/index.html"));
-});
+app.use(express.static(path.join(__dirname, 'public')));
 
 module.exports = router;
